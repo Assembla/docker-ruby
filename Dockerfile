@@ -15,3 +15,4 @@ RUN cd ruby-2.1.2 && \
     ./configure --prefix=/usr --with-out-ext=tk --disable-install-doc && \
     make && make install && \
     cd .. && rm -rf ruby-2.1.2*
+RUN gem install bundler --no-ri --no-rdoc
