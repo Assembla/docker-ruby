@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM ubuntu:trusty
 MAINTAINER Artiom Di <kron82@gmail.com>
 
 RUN apt-get -qq update
