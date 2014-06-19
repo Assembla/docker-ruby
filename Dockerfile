@@ -1,12 +1,6 @@
-FROM ubuntu:trusty
+FROM assembla/ubuntu
 MAINTAINER Artiom Di <kron82@gmail.com>
 
-RUN apt-get -qq update
-RUN DEBIAN_FRONTEND=noninteractive \
-    apt-get \
-    -o Dpkg::Options::="--force-confnew" \
-    --force-yes \
-    -fuy dist-upgrade
 RUN apt-get install -y curl libtool autoconf build-essential libreadline6 \
     libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev \
     libffi-dev libgdbm-dev git subversion libmysqlclient-dev nodejs \
