@@ -6,9 +6,9 @@ RUN apt-get install -y curl libtool autoconf build-essential libreadline6 \
     libffi-dev libgdbm-dev git nodejs npm \
     libxslt-dev bison flex \
     && apt-get clean
-RUN curl --progress http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz | tar xz
-RUN cd ruby-2.1.2 && \
+RUN curl --progress http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.5.tar.gz | tar xz
+RUN cd ruby-2.1.* && \
     ./configure --prefix=/usr --with-out-ext=tk --disable-install-doc --enable-shared && \
     make && make install && \
-    cd .. && rm -rf ruby-2.1.2*
+    cd .. && rm -rf ruby-2.1*
 RUN gem install bundler --no-ri --no-rdoc
