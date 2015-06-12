@@ -9,7 +9,7 @@ RUN apt-get install -y libtool autoconf build-essential libreadline6 \
 RUN curl http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz | \
     tar xvzf - -C /tmp && \
     cd /tmp/ruby-* && \
-    ./configure --prefix=/usr --with-out-ext=tk --disable-install-doc && \
+    ./configure --prefix=/usr --with-out-ext=tk --disable-install-doc --enable-shared && \
     make && make install && \
     cd .. && rm -rf ruby-*
 RUN gem install bundler --no-ri --no-rdoc
